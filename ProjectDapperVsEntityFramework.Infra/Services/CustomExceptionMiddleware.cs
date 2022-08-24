@@ -9,6 +9,7 @@ namespace ProjectDapperVsEntityFramework.Infra.Services
     public class CustomExceptionMiddleware
     {
         private readonly RequestDelegate _requestDelegate;
+
         public CustomExceptionMiddleware(RequestDelegate requestDelegate)
         {
             _requestDelegate = requestDelegate;

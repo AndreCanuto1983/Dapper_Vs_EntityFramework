@@ -34,7 +34,7 @@ namespace ProjectDapperVsEntityFramework.Infra.Repository
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.Message);
+                _logger.LogError("[UserRepository][GetUserByEmail] => EXCEPTION: {ex.Message}", ex.Message);                
                 throw;
             }
         }
@@ -50,7 +50,7 @@ namespace ProjectDapperVsEntityFramework.Infra.Repository
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.Message);
+                _logger.LogError("[UserRepository][GetUsers] => EXCEPTION: {ex.Message}", ex.Message);
                 throw;
             }
         }
