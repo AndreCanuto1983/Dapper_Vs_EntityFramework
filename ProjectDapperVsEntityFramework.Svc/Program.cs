@@ -15,13 +15,15 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
-{
-    app.UseHealthChecks("/health");
-    app.UseCustomExceptionMiddleware();
-    app.UseResponseCaching();
+{      
     app.UseSwagger();
     app.UseSwaggerUI(); 
 }
+app.UseResponseCaching();
+
+app.UseCustomExceptionMiddleware();
+
+app.UseHealthChecks("/health");
 
 app.UseAuthorization();
 
